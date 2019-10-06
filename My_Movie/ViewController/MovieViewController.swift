@@ -11,7 +11,9 @@ import UIKit
 class MovieViewController: UIViewController {
     
     
-    @IBOutlet weak var movieTableView: UITableView!
+    @IBOutlet weak var movieCollectionView: UICollectionView!
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,40 +22,22 @@ class MovieViewController: UIViewController {
     }
     
     func setupMovie() {
-        movieTableView.register(UINib(nibName: SearchBarTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: SearchBarTableCell.identifier)
+
         
-        movieTableView.register(UINib(nibName: ResultCollectionCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: ResultCollectionCell.identifier)
-    
+        movieCollectionView.register(UINib(nibName: ResultCollectionCell.identifier, bundle: Bundle.main), forCellWithReuseIdentifier: ResultCollectionCell.identifier)
+        
+        searchController.searchBar.placeholder = "Search movie..."
+        searchController.searchBar.delegate = self
+        navigationItem.hidesSearchBarWhenScrolling = false
+               navigationItem.searchController = searchController
+               definesPresentationContext = true
+        movieCollectionView.reloadData()
     }
 
 
 }
 
-extension MovieViewController: UITableViewDelegate {
-    
-}
 
-extension MovieViewController: UITableViewDataSource {
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
-//
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        switch indexPath.section {
-//        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SearchBarTableCell.identifier, for: indexPath) as! SearchBarTableCell
-            return cell
-//        default:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: ResultCollectionCell.identifier, for: indexPath) as! ResultCollectionCell
-//
-//            return cell
-//        }
-    }
-}
 
 extension MovieViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,10 +47,23 @@ extension MovieViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResultCollectionCell.identifier, for: indexPath) as! ResultCollectionCell
         cell.movieImage?.image = #imageLiteral(resourceName: "1")
+//        self.movieCollectionView.reloadData()
         return cell
     }
 }
 
 extension MovieViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.frame.width / 3
+        return CGSize(width: width, height: width)
+    }
+}
+
+extension MovieViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        navigationItem.searchController?.isActive = false
+    }
     
 }
