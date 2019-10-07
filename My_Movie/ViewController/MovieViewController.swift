@@ -12,8 +12,9 @@ class MovieViewController: UIViewController {
     
     
     @IBOutlet weak var movieCollectionView: UICollectionView!
+    var viewModel: ViewModel!
     
-    let searchController = UISearchController(searchResultsController: nil)
+//    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +24,14 @@ class MovieViewController: UIViewController {
     
     func setupMovie() {
 
-        
+        viewModel?.showtimeDelegate = self
         movieCollectionView.register(UINib(nibName: ResultCollectionCell.identifier, bundle: Bundle.main), forCellWithReuseIdentifier: ResultCollectionCell.identifier)
         
-        searchController.searchBar.placeholder = "Search movie..."
-        searchController.searchBar.delegate = self
-        navigationItem.hidesSearchBarWhenScrolling = false
-               navigationItem.searchController = searchController
-               definesPresentationContext = true
+//        searchController.searchBar.placeholder = "Search movie..."
+//        searchController.searchBar.delegate = self
+//        navigationItem.hidesSearchBarWhenScrolling = false
+//               navigationItem.searchController = searchController
+//               definesPresentationContext = true
         movieCollectionView.reloadData()
     }
 
@@ -59,11 +60,19 @@ extension MovieViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MovieViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
-        navigationItem.searchController?.isActive = false
+//extension MovieViewController: UISearchBarDelegate {
+//
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+//        navigationItem.searchController?.isActive = false
+//    }
+//
+//}
+
+extension MovieViewController: ShowTimeMovieDelegate {
+    func update() {
+        DispatchQueue.main.async {
+            self.movieCollectionView.reloadData()
+        }
     }
-    
 }

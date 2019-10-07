@@ -9,9 +9,9 @@
 import UIKit
 
 class MovieResponse: Decodable {
-    let movie: [Movie]
+    let movies: [Movie]
     private enum Codingkeys: String, CodingKey {
-        case movie = "results"
+        case movies = "results"
     }
 }
 

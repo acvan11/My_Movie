@@ -21,6 +21,7 @@ class ResultCollectionCell: UICollectionViewCell {
     var movie: Movie! {
         didSet {
             movieImage.image = #imageLiteral(resourceName: "1.jpeg")
+            movieTitle.text = movie.title
         }
     }
 
