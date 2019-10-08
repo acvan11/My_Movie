@@ -10,17 +10,17 @@ import UIKit
 
 class MovieResponse: Decodable {
     let movies: [Movie]
-    private enum Codingkeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case movies = "results"
     }
 }
 
 struct Movie: Decodable {
-    let popularity: Int32
-    let poster: String
+    let popularity: Double
+    let poster: String?
     let id: Int
     let title: String
-    let year: String
+    let year: String?
     let overview: String
     
     private enum CodingKeys: String, CodingKey {
