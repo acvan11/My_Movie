@@ -8,16 +8,12 @@
 
 import Foundation
 
-protocol ShowTimeMovieDelegate: class {
-    func update()
-}
-
 class ViewModel {
-    weak var showtimeDelegate: ShowTimeMovieDelegate?
     
     var showtimeMovies = [Movie]() {
         didSet {
-            showtimeDelegate?.update()
+            let userInfo: [String:ViewModel] = ["ViewModel":self]
+            NotificationCenter.default.post(name: Notification.Name.MovieNotification, object: nil, userInfo: userInfo)
         }
     }
     
