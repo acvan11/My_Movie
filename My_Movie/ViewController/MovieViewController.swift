@@ -10,7 +10,7 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
- 
+    
     @IBOutlet weak var gridViewController: UIView!
     @IBOutlet weak var listViewController: UIView!
     
@@ -32,24 +32,21 @@ class MovieViewController: UIViewController {
     
     func setupMovie() {
         viewModel.getShowtimeMovie()
-       searchController.searchBar.placeholder = "Search movie..."
+        searchController.searchBar.placeholder = "Search movie..."
         searchController.searchBar.delegate = self
         navigationItem.hidesSearchBarWhenScrolling = false
-               navigationItem.searchController = searchController
-               definesPresentationContext = true
-      
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+
     }
-
-
 }
 
 
 
 extension MovieViewController: UISearchBarDelegate {
-
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         navigationItem.searchController?.isActive = false
     }
-
 }

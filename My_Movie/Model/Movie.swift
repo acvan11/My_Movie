@@ -28,4 +28,22 @@ struct Movie: Decodable {
         case year = "release_date"
         case popularity, id, title, overview
     }
+    
+       func getImage(completion: @escaping (UIImage?) -> Void) {
+        if poster != nil {
+            //the poster url doesn't have a full url
+            let image = "https://image.tmdb.org/t/p/w300/" + poster!
+            cache.downloadFrom(endpoint: image) { dat in
+                if let data = dat {
+                    DispatchQueue.main.async {
+                        completion(UIImage(data: data))
+                    }
+                }
+            }
+        } else {
+            completion(nil)
+            return
+        }
+    }
 }
+

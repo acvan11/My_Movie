@@ -23,6 +23,7 @@
 		33FE22A4234DA03A00B76E45 /* ListSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE22A3234DA03A00B76E45 /* ListSearchViewController.swift */; };
 		33FE22A6234DA04900B76E45 /* GridSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE22A5234DA04900B76E45 /* GridSearchViewController.swift */; };
 		33FE22A8234DA0AA00B76E45 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE22A7234DA0AA00B76E45 /* Notification+Name.swift */; };
+		33FE22AA234DA7D800B76E45 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE22A9234DA7D800B76E45 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		33FE22A3234DA03A00B76E45 /* ListSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSearchViewController.swift; sourceTree = "<group>"; };
 		33FE22A5234DA04900B76E45 /* GridSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSearchViewController.swift; sourceTree = "<group>"; };
 		33FE22A7234DA0AA00B76E45 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		33FE22A9234DA7D800B76E45 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				3390CEC12349518500035F3E /* MovieAPI.swift */,
 				3390CEC7234A72B400035F3E /* MovieService.swift */,
+				33FE22A9234DA7D800B76E45 /* CacheManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				33FE22A8234DA0AA00B76E45 /* Notification+Name.swift in Sources */,
 				3390CEC423495E4500035F3E /* Movie.swift in Sources */,
 				3366E5F0234940C900F72869 /* MovieViewController.swift in Sources */,
+				33FE22AA234DA7D800B76E45 /* CacheManager.swift in Sources */,
 				3366E5EE234940C900F72869 /* AppDelegate.swift in Sources */,
 				33FE22A6234DA04900B76E45 /* GridSearchViewController.swift in Sources */,
 				3390CEC22349518500035F3E /* MovieAPI.swift in Sources */,
