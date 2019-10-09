@@ -28,10 +28,12 @@ class DetailMovieViewController: UIViewController {
     }
 
     @IBAction func wishlistButtonTapped(_ sender: UIButton) {
+        //TODO
     }
     
     
     @IBAction func FavoriteButtonTapped(_ sender: UIButton) {
+        //TODO
     }
     
     func setupDetail() {

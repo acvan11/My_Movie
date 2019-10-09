@@ -10,4 +10,5 @@ import Foundation
 
 extension Notification.Name {
     static let MovieNotification = Notification.Name("Movies")
+    static let SearchMovieNotification = Notification.Name("SearchingMovies")
 }

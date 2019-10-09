@@ -31,14 +31,25 @@ import Foundation
 struct MovieAPI {
     //  https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2019-08-15&primary_release_date.lte=now&api_key=2d7ee23b63ad65858ab3e85df256371c
     
+    var search: String
+    
+    init(search: String) {
+        self.search = search
+    }
+    
     let base = "https://api.themoviedb.org/3/"
     let showtime = "discover/movie?primary_release_date.gte=2019-08-15&primary_release_date.lte=now&"
     let apiKey = "&api_key=2d7ee23b63ad65858ab3e85df256371c"
+    
+    let searchMovie = "search/movie?query="
     
     var getShowtimeMovieUrl: URL? {
         return URL(string: base + showtime + apiKey)
     }
     
+    var getSearchingMovieUrl: URL? {
+        return URL(string: base + searchMovie + search + apiKey )
+    }
     
     
 }

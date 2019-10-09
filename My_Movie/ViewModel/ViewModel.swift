@@ -19,10 +19,24 @@ class ViewModel {
         }
     }
     
-    func getShowtimeMovie() {
-        MovieService.shared.getShowtimeMovie { [weak self] showtimeFilms in
+//    var searchingMovies = [Movie]() {
+//        didSet {
+//                  let userInfo: [String:ViewModel] = ["ViewModel":self]
+//            NotificationCenter.default.post(name: Notification.Name.SearchMovieNotification, object: nil, userInfo: userInfo)
+//              }
+//    }
+    
+    func getShowtimeMovie(search: String) {
+        MovieService.shared.getShowtimeMovie(for: search) { [weak self] showtimeFilms in
             self?.showtimeMovies = showtimeFilms
             print("showtime movies Count: \(showtimeFilms.count)")
         }
     }
+    
+    func getSearchingMovie(search: String) {
+         MovieService.shared.getSearchingMovie(for: search) { [weak self] searchingFilms in
+             self?.showtimeMovies = searchingFilms
+             print("showtime movies Count: \(searchingFilms.count)")
+         }
+     }
 }

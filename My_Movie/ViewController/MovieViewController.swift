@@ -31,7 +31,7 @@ class MovieViewController: UIViewController {
     
     
     func setupMovie() {
-        viewModel.getShowtimeMovie()
+        viewModel.getShowtimeMovie(search: "")
         searchController.searchBar.placeholder = "Search movie..."
         searchController.searchBar.delegate = self
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -47,6 +47,7 @@ extension MovieViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        viewModel.getSearchingMovie(search: searchText)
         navigationItem.searchController?.isActive = false
     }
 }
