@@ -173,6 +173,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="fd5-C3-mPM" kind="relationship" relationship="viewControllers" id="Ts7-66-PVb"/>
+                        <segue destination="7qQ-DC-Huz" kind="relationship" relationship="viewControllers" id="iPC-xn-2bN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzO-R7-7A3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,6 +199,16 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
         </scene>
+        <!--People-->
+        <scene sceneID="I5B-dU-J3s">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="People" storyboardName="People" id="7qQ-DC-Huz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3SK-Ax-miV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PX5-Uc-myk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="700"/>
+        </scene>
         <!--Grid Search View Controller-->
         <scene sceneID="XV1-gd-08w">
             <objects>
@@ -205,7 +216,7 @@
                     <view key="view" contentMode="scaleToFill" id="YUB-vw-CbF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cqP-A5-JmB"/>
                     </view>
                 </viewController>
@@ -222,25 +233,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7H5-CD-Hdq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="l9d-Qr-z6e" id="pWG-Lb-I3h"/>
                                     <outlet property="delegate" destination="l9d-Qr-z6e" id="7p1-uY-0fT"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6h-KB-EOu">
+                                <rect key="frame" x="30" y="10" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C6h-KB-EOu" secondAttribute="trailing" constant="30" id="7To-tv-5MC"/>
                             <constraint firstItem="7H5-CD-Hdq" firstAttribute="leading" secondItem="QTV-S2-C6L" secondAttribute="leading" id="BSx-yt-uIu"/>
                             <constraint firstAttribute="trailing" secondItem="7H5-CD-Hdq" secondAttribute="trailing" id="C7a-pS-dGG"/>
                             <constraint firstAttribute="bottom" secondItem="7H5-CD-Hdq" secondAttribute="bottom" id="J7m-eg-eDk"/>
-                            <constraint firstItem="7H5-CD-Hdq" firstAttribute="top" secondItem="QTV-S2-C6L" secondAttribute="top" id="dYY-Ok-lgK"/>
+                            <constraint firstItem="C6h-KB-EOu" firstAttribute="top" secondItem="QTV-S2-C6L" secondAttribute="top" constant="10" id="LKu-BE-prN"/>
+                            <constraint firstItem="7H5-CD-Hdq" firstAttribute="top" secondItem="QTV-S2-C6L" secondAttribute="top" constant="50" id="dYY-Ok-lgK"/>
+                            <constraint firstItem="C6h-KB-EOu" firstAttribute="leading" secondItem="QTV-S2-C6L" secondAttribute="leading" constant="30" id="zGp-WT-mPb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUp-2w-loV"/>
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="7H5-CD-Hdq" id="PAc-6R-Xuo"/>
+                        <outlet property="resultLabel" destination="C6h-KB-EOu" id="KXU-EK-koo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5KY-QI-Q5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

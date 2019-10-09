@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332F3AFB234E9EBD001B1366 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F3AFA234E9EBD001B1366 /* PeopleViewController.swift */; };
+		332F3AFD234E9EF3001B1366 /* ListPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F3AFC234E9EF3001B1366 /* ListPeopleViewController.swift */; };
+		332F3AFF234E9F01001B1366 /* GridPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F3AFE234E9F01001B1366 /* GridPeopleViewController.swift */; };
+		332F3B01234E9F16001B1366 /* DetailPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F3B00234E9F16001B1366 /* DetailPeopleViewController.swift */; };
+		332F3B03234E9F3A001B1366 /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332F3B02234E9F3A001B1366 /* People.storyboard */; };
 		3366E5EE234940C900F72869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366E5ED234940C900F72869 /* AppDelegate.swift */; };
 		3366E5F0234940C900F72869 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366E5EF234940C900F72869 /* MovieViewController.swift */; };
 		3366E5F3234940C900F72869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3366E5F1234940C900F72869 /* Main.storyboard */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332F3AFA234E9EBD001B1366 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		332F3AFC234E9EF3001B1366 /* ListPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeopleViewController.swift; sourceTree = "<group>"; };
+		332F3AFE234E9F01001B1366 /* GridPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPeopleViewController.swift; sourceTree = "<group>"; };
+		332F3B00234E9F16001B1366 /* DetailPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeopleViewController.swift; sourceTree = "<group>"; };
+		332F3B02234E9F3A001B1366 /* People.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = People.storyboard; sourceTree = "<group>"; };
 		3366E5EA234940C900F72869 /* My_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3366E5ED234940C900F72869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3366E5EF234940C900F72869 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +161,10 @@
 				33FE22A3234DA03A00B76E45 /* ListSearchViewController.swift */,
 				33FE22A5234DA04900B76E45 /* GridSearchViewController.swift */,
 				33C7909A234DB6EA0009359B /* DetailMovieViewController.swift */,
+				332F3AFA234E9EBD001B1366 /* PeopleViewController.swift */,
+				332F3AFC234E9EF3001B1366 /* ListPeopleViewController.swift */,
+				332F3AFE234E9F01001B1366 /* GridPeopleViewController.swift */,
+				332F3B00234E9F16001B1366 /* DetailPeopleViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -159,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				3366E5F1234940C900F72869 /* Main.storyboard */,
+				332F3B02234E9F3A001B1366 /* People.storyboard */,
 				3366E5F9234940CA00F72869 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -274,6 +289,7 @@
 			files = (
 				3366E5FB234940CA00F72869 /* LaunchScreen.storyboard in Resources */,
 				3366E5F8234940CA00F72869 /* Assets.xcassets in Resources */,
+				332F3B03234E9F3A001B1366 /* People.storyboard in Resources */,
 				3366E5F3234940C900F72869 /* Main.storyboard in Resources */,
 				33FE22A0234D9D8800B76E45 /* ListMovieTableCell.xib in Resources */,
 			);
@@ -297,10 +313,14 @@
 				33FE22A8234DA0AA00B76E45 /* Notification+Name.swift in Sources */,
 				3390CEC423495E4500035F3E /* Movie.swift in Sources */,
 				3366E5F0234940C900F72869 /* MovieViewController.swift in Sources */,
+				332F3B01234E9F16001B1366 /* DetailPeopleViewController.swift in Sources */,
+				332F3AFF234E9F01001B1366 /* GridPeopleViewController.swift in Sources */,
 				33C7909B234DB6EA0009359B /* DetailMovieViewController.swift in Sources */,
+				332F3AFB234E9EBD001B1366 /* PeopleViewController.swift in Sources */,
 				33FE22AA234DA7D800B76E45 /* CacheManager.swift in Sources */,
 				3366E5EE234940C900F72869 /* AppDelegate.swift in Sources */,
 				33FE22A6234DA04900B76E45 /* GridSearchViewController.swift in Sources */,
+				332F3AFD234E9EF3001B1366 /* ListPeopleViewController.swift in Sources */,
 				3390CEC22349518500035F3E /* MovieAPI.swift in Sources */,
 				3366E5F6234940C900F72869 /* My_Movie.xcdatamodeld in Sources */,
 				33C7909D234DB7B10009359B /* ViewController+Extension.swift in Sources */,

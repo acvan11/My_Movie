@@ -19,12 +19,6 @@ class ViewModel {
         }
     }
     
-//    var searchingMovies = [Movie]() {
-//        didSet {
-//                  let userInfo: [String:ViewModel] = ["ViewModel":self]
-//            NotificationCenter.default.post(name: Notification.Name.SearchMovieNotification, object: nil, userInfo: userInfo)
-//              }
-//    }
     
     func getShowtimeMovie(search: String) {
         MovieService.shared.getShowtimeMovie(for: search) { [weak self] showtimeFilms in
