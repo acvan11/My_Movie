@@ -31,7 +31,7 @@ class MovieViewController: UIViewController {
     
     
     func setupMovie() {
-
+        viewModel.getShowtimeMovie()
        searchController.searchBar.placeholder = "Search movie..."
         searchController.searchBar.delegate = self
         navigationItem.hidesSearchBarWhenScrolling = false

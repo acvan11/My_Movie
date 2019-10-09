@@ -10,21 +10,54 @@ import UIKit
 
 class ListSearchViewController: UIViewController {
 
+    @IBOutlet weak var listTableView: UITableView!
+    
+    var viewModel = ViewModel() {
+        didSet {
+            self.listTableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupList()
     }
     
 
-    /*
-    // MARK: - Navigation
+        func setupList() {
+            listTableView.register(UINib(nibName: ListMovieTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: ListMovieTableCell.identifier)
+                   
+            listTableView.tableFooterView = UIView(frame: .zero)
+            
+            NotificationCenter.default.addObserver(forName: Notification.Name.MovieNotification, object: nil, queue: .main) { note in
+                      guard let userInfo = note.userInfo as? [String:ViewModel] else { return }
+                  
+                      self.viewModel = userInfo["ViewModel"]!
+        }
+        
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    }
 
+
+
+
+
+extension ListSearchViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //TODO:
+        return viewModel.showtimeMovies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListMovieTableCell.identifier, for: indexPath) as! ListMovieTableCell
+        //TODO
+        let movie = viewModel.showtimeMovies[indexPath.row]
+        cell.movie = movie
+        return cell
+    }
+}
+
+extension ListSearchViewController: UITableViewDelegate {
+    
 }

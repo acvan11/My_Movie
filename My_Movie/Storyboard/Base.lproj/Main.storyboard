@@ -150,8 +150,27 @@
                     <view key="view" contentMode="scaleToFill" id="QTV-S2-C6L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7H5-CD-Hdq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="l9d-Qr-z6e" id="pWG-Lb-I3h"/>
+                                    <outlet property="delegate" destination="l9d-Qr-z6e" id="7p1-uY-0fT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7H5-CD-Hdq" firstAttribute="leading" secondItem="QTV-S2-C6L" secondAttribute="leading" id="BSx-yt-uIu"/>
+                            <constraint firstAttribute="trailing" secondItem="7H5-CD-Hdq" secondAttribute="trailing" id="C7a-pS-dGG"/>
+                            <constraint firstAttribute="bottom" secondItem="7H5-CD-Hdq" secondAttribute="bottom" id="J7m-eg-eDk"/>
+                            <constraint firstItem="7H5-CD-Hdq" firstAttribute="top" secondItem="QTV-S2-C6L" secondAttribute="top" id="dYY-Ok-lgK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="listTableView" destination="7H5-CD-Hdq" id="PAc-6R-Xuo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5KY-QI-Q5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
