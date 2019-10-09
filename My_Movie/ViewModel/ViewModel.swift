@@ -10,6 +10,8 @@ import Foundation
 
 class ViewModel {
     
+    var movie: Movie!
+    
     var showtimeMovies = [Movie]() {
         didSet {
             let userInfo: [String:ViewModel] = ["ViewModel":self]
