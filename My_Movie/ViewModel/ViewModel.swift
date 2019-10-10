@@ -19,6 +19,13 @@ class ViewModel {
         }
     }
     
+    var listPeople = [People]() {
+        didSet {
+            let userInfo: [String:ViewModel] = ["ViewModel":self]
+            NotificationCenter.default.post(name: Notification.Name.SearchPeopleNotification, object: nil, userInfo: userInfo)
+        }
+    }
+    
     
     func getShowtimeMovie(search: String) {
         MovieService.shared.getShowtimeMovie(for: search) { [weak self] showtimeFilms in
@@ -30,7 +37,14 @@ class ViewModel {
     func getSearchingMovie(search: String) {
          MovieService.shared.getSearchingMovie(for: search) { [weak self] searchingFilms in
              self?.showtimeMovies = searchingFilms
-             print("showtime movies Count: \(searchingFilms.count)")
+             print("List of movies Count: \(searchingFilms.count)")
          }
      }
+    
+    func getPeople(search: String) {
+        MovieService.shared.getSearchingPeople(for: search) { [weak self] searchingPeople in
+            self?.listPeople = searchingPeople
+                 print("People Count: \(searchingPeople.count)")
+             }
+    }
 }

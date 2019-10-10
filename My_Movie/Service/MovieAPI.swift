@@ -43,6 +43,8 @@ struct MovieAPI {
     
     let searchMovie = "search/movie?query="
     
+    let searchPeople = "search/person?query="
+    
     var getShowtimeMovieUrl: URL? {
         return URL(string: base + showtime + apiKey)
     }
@@ -51,5 +53,8 @@ struct MovieAPI {
         return URL(string: base + searchMovie + search + apiKey )
     }
     
+    var getPeopleUrl: URL? {
+        return URL(string: base + searchPeople + search + apiKey)
+    }
     
 }

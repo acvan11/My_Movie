@@ -13,10 +13,13 @@ class PeopleViewController: UIViewController {
     @IBOutlet weak var listPeopleViewController: UIView!
     @IBOutlet weak var gridPeopleViewController: UIView!
     
+    var viewModel = ViewModel()
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupPeople()
     }
     
     @IBAction func SwitchButtonTapped(_ sender: UIBarButtonItem) {
@@ -25,4 +28,23 @@ class PeopleViewController: UIViewController {
         gridPeopleViewController.isHidden.toggle()
     }
     
+    func setupPeople() {
+   
+        searchController.searchBar.placeholder = "Search people name in here..."
+        searchController.searchBar.delegate = self
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+    }
+    
+}
+
+extension PeopleViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        viewModel.getPeople(search: searchText)
+        navigationItem.searchController?.isActive = false
+    }
 }
