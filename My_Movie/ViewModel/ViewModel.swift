@@ -11,6 +11,7 @@ import Foundation
 class ViewModel {
     
     var movie: Movie!
+    var people: People!
     
     var showtimeMovies = [Movie]() {
         didSet {

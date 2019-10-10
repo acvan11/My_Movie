@@ -10,21 +10,39 @@ import UIKit
 
 class DetailPeopleViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imagePeople: UIImageView!
+    @IBOutlet weak var Occupation: UILabel!
+    
+    @IBOutlet weak var peopleTableView: UITableView!
+    
+    var viewModel: ViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupListPeopleMovies()
+    }
+    
+    func setupListPeopleMovies() {
+      //  nameLabel.text = viewModel
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DetailPeopleViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
-    */
+}
 
+extension DetailPeopleViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListPeopleMovieTableCell.identifier, for: indexPath) as! ListPeopleMovieTableCell
+        return cell
+    }
 }

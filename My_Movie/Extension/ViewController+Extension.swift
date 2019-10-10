@@ -15,4 +15,11 @@ extension UIViewController {
                navigationController?.pushViewController(detailVC, animated: true)
                
     }
+    
+    func goToPeopleDetail(with vm: ViewModel) {
+           let detailPeopleVC = storyboard?.instantiateViewController(withIdentifier: "DetailPeopleViewController") as! DetailPeopleViewController
+                  detailPeopleVC.viewModel = vm
+                  navigationController?.pushViewController(detailPeopleVC, animated: true)
+                  
+       }
 }
