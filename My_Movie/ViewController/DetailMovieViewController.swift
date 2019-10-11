@@ -28,7 +28,12 @@ class DetailMovieViewController: UIViewController {
     }
 
     @IBAction func wishlistButtonTapped(_ sender: UIButton) {
-        //TODO
+        let movie = viewModel.movie
+        print("movie row that I click = " +  movie!.title)
+        
+        if !viewModel.isInWishlist(movie: movie!) {
+            viewModel.add(movie: movie!)
+        }
     }
     
     

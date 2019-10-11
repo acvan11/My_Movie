@@ -61,4 +61,36 @@ class ViewModel {
             print("Movie People count: \(movies.count)")
         }
     }
+    
+    var wishlist = [Movie]() {
+        didSet {
+            let userInfo: [String:ViewModel] = ["ViewModel":self]
+                     NotificationCenter.default.post(name: Notification.Name.WishlistNotification, object: nil, userInfo: userInfo)
+        }
+    }
+    
+    func isInWishlist(movie: Movie) -> Bool {
+        let id = movie.id
+        for mv in CoreManager.shared.load() {
+            if (mv.id == id) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func add(movie: Movie){
+        CoreManager.shared.save(movie)
+        print("number of wishlist = " + String(wishlist.count))
+    }
+    
+    func delete(movie: Movie) {
+        CoreManager.shared.delete(movie)
+    }
+    
+    func getWishlist() {
+        print("Call getWishlist()")
+        wishlist = CoreManager.shared.load()
+    }
+    
 }

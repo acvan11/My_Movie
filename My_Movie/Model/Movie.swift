@@ -45,5 +45,14 @@ struct Movie: Decodable {
             return
         }
     }
+    
+    init(from core: CoreMovie) {
+        self.id = Int(core.id)
+        self.popularity = core.popularity
+        self.poster = core.poster
+        self.title = core.title ?? ""
+        self.year = core.year
+        self.overview = core.overview ?? ""
+    }
 }
 
