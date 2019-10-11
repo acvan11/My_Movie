@@ -16,6 +16,7 @@
 		332F3B07234EABFD001B1366 /* PeopleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F3B06234EABFD001B1366 /* PeopleTableCell.swift */; };
 		332F3B09234FA7FE001B1366 /* ListPeopleMovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F3B08234FA7FE001B1366 /* ListPeopleMovieTableCell.swift */; };
 		33422C7B23500EFD008F43A4 /* DetailMoviePeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C7A23500EFD008F43A4 /* DetailMoviePeopleViewController.swift */; };
+		33422C7D23501E66008F43A4 /* GridMovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C7C23501E66008F43A4 /* GridMovieCollectionCell.swift */; };
 		3366E5EE234940C900F72869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366E5ED234940C900F72869 /* AppDelegate.swift */; };
 		3366E5F0234940C900F72869 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366E5EF234940C900F72869 /* MovieViewController.swift */; };
 		3366E5F3234940C900F72869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3366E5F1234940C900F72869 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		332F3B06234EABFD001B1366 /* PeopleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableCell.swift; sourceTree = "<group>"; };
 		332F3B08234FA7FE001B1366 /* ListPeopleMovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeopleMovieTableCell.swift; sourceTree = "<group>"; };
 		33422C7A23500EFD008F43A4 /* DetailMoviePeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMoviePeopleViewController.swift; sourceTree = "<group>"; };
+		33422C7C23501E66008F43A4 /* GridMovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMovieCollectionCell.swift; sourceTree = "<group>"; };
 		3366E5EA234940C900F72869 /* My_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3366E5ED234940C900F72869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3366E5EF234940C900F72869 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				332F3B06234EABFD001B1366 /* PeopleTableCell.swift */,
 				332F3B08234FA7FE001B1366 /* ListPeopleMovieTableCell.swift */,
 				3366E5F7234940CA00F72869 /* Assets.xcassets */,
+				33422C7C23501E66008F43A4 /* GridMovieCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				3366E5F6234940C900F72869 /* My_Movie.xcdatamodeld in Sources */,
 				33C7909D234DB7B10009359B /* ViewController+Extension.swift in Sources */,
 				3390CECA234AAA7600035F3E /* ViewModel.swift in Sources */,
+				33422C7D23501E66008F43A4 /* GridMovieCollectionCell.swift in Sources */,
 				3390CEC8234A72B400035F3E /* MovieService.swift in Sources */,
 				33FE229F234D9D8800B76E45 /* ListMovieTableCell.swift in Sources */,
 				33422C7B23500EFD008F43A4 /* DetailMoviePeopleViewController.swift in Sources */,
