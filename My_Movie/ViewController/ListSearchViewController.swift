@@ -32,9 +32,9 @@ class ListSearchViewController: UIViewController {
         
         listTableView.tableFooterView = UIView(frame: .zero)
         
-        NotificationCenter.default.addObserver(forName: Notification.Name.MovieNotification, object: nil, queue: .main) { note in
+        NotificationCenter.default.addObserver(forName: Notification.Name.MovieNotification, object: nil, queue: .main) {[weak self] note in
             guard let userInfo = note.userInfo as? [String:ViewModel] else { return }
-            self.viewModel = userInfo["ViewModel"]!
+            self?.viewModel = userInfo["ViewModel"]!
         }
         
       

@@ -39,7 +39,8 @@ class DetailMovieViewController: UIViewController {
     func setupDetail() {
         
         movieTitle.text = viewModel.movie.title
-        movieReleaseDate.text = "Release Date: " + viewModel.movie.year!
+         let year = viewModel.movie.year ?? "No data"
+        movieReleaseDate.text = "Release Date: " + year
         moviePopularity.text = "Popularity: " + String(viewModel.movie.popularity)
         movieOverview.text = viewModel.movie.overview
         

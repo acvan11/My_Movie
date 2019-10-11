@@ -24,9 +24,6 @@
                             </containerView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTX-J8-Se2">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <connections>
-                                    <segue destination="oD3-oW-UpC" kind="embed" id="Wck-bR-fw3"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -42,15 +39,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aVP-ei-kAs"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BRg-fo-uR9">
-                        <barButtonItem key="rightBarButtonItem" title="Switch" id="4om-wn-Cjm">
-                            <connections>
-                                <action selector="SwitchButtonTapped:" destination="UPj-BV-t93" id="ZM7-hx-cD1"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="BRg-fo-uR9"/>
                     <connections>
-                        <outlet property="gridPeopleViewController" destination="jTX-J8-Se2" id="Neg-xS-ROi"/>
                         <outlet property="listPeopleViewController" destination="I9Z-z6-hLn" id="RZL-Mc-vJM"/>
                     </connections>
                 </viewController>
@@ -289,21 +279,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZC-dO-O2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="366.66666666666669" y="743.63839285714278"/>
-        </scene>
-        <!--Grid People View Controller-->
-        <scene sceneID="dsF-fh-d8S">
-            <objects>
-                <viewController storyboardIdentifier="GridPeopleViewController" id="oD3-oW-UpC" customClass="GridPeopleViewController" customModule="My_Movie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FHh-OR-r6X">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="OAN-dE-apt"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="alx-XY-1Oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1436" y="744"/>
         </scene>
         <!--Detail Movie People View Controller-->
         <scene sceneID="Au1-zz-vPk">

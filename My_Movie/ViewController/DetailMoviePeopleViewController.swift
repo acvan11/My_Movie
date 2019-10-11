@@ -33,7 +33,8 @@ class DetailMoviePeopleViewController: UIViewController {
     
     func setupDetail() {
         movieName.text = viewModel.movie.title
-        releaseDateLabel.text = "Release Date: " + viewModel.movie.year!
+        let year = viewModel.movie.year ?? "No data"
+        releaseDateLabel.text = "Release Date: " + year
         popularityLabel.text = "Popularity: " + String(viewModel.movie.popularity)
         overviewLabel.text = viewModel.movie.overview
         

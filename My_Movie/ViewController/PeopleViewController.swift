@@ -11,7 +11,6 @@ import UIKit
 class PeopleViewController: UIViewController {
     
     @IBOutlet weak var listPeopleViewController: UIView!
-    @IBOutlet weak var gridPeopleViewController: UIView!
     
     var viewModel = ViewModel()
     
@@ -22,11 +21,7 @@ class PeopleViewController: UIViewController {
         setupPeople()
     }
     
-    @IBAction func SwitchButtonTapped(_ sender: UIBarButtonItem) {
-        
-        listPeopleViewController.isHidden.toggle()
-        gridPeopleViewController.isHidden.toggle()
-    }
+
     
     func setupPeople() {
    
