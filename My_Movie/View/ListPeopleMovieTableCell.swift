@@ -18,7 +18,7 @@ class ListPeopleMovieTableCell: UITableViewCell {
     
     var popular: Popular! {
         didSet {
-//            self.titleMovie.text = popular.title
+            self.titleMovie.text = popular.title
         }
     }
     

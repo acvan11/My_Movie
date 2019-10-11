@@ -67,6 +67,8 @@ extension ListPeopleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.people = viewModel.listPeople[indexPath.row]
+        let peopleId = String(viewModel.listPeople[indexPath.row].id)
+        viewModel.getMoviePeople(search: peopleId)
              goToPeopleDetail(with: viewModel)
     }
 }

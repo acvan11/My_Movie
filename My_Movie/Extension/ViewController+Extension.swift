@@ -22,4 +22,11 @@ extension UIViewController {
                   navigationController?.pushViewController(detailPeopleVC, animated: true)
                   
        }
+    
+    func goToMoviePeopleDetail(with vm: ViewModel) {
+           let detailMoviePeopleVC = storyboard?.instantiateViewController(withIdentifier: "DetailMoviePeopleViewController") as! DetailMoviePeopleViewController
+                  detailMoviePeopleVC.viewModel = vm
+                  navigationController?.pushViewController(detailMoviePeopleVC, animated: true)
+                  
+       }
 }

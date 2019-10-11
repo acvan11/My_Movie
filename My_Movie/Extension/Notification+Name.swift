@@ -12,4 +12,5 @@ extension Notification.Name {
     static let MovieNotification = Notification.Name("Movies")
     static let SearchMovieNotification = Notification.Name("SearchingMovies")
     static let SearchPeopleNotification = Notification.Name("SearchingPeople")
+        static let MoviePeopleNotification = Notification.Name("MoviePeople")
 }

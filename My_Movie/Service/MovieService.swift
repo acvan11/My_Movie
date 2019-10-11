@@ -101,5 +101,32 @@ final class MovieService {
             }.resume()
         }
     
+     func getListMoviePeople(for search: String, completion: @escaping MovieHandler) {
+             guard let url = MovieAPI(search: search).getMoviePeopleUrl else {
+                 completion([])
+                 return
+             }
+             
+             URLSession.shared.dataTask(with: url) { (dat, _, err) in
+                 if let error = err {
+                     print("Error: \(error.localizedDescription)")
+                     completion([])
+                     return
+                 }
+                 
+                 if let data = dat {
+                     do {
+                         let moviePeopleResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
+                         let moviePeople = moviePeopleResponse.movies
+                         completion(moviePeople)
+                     } catch let myError {
+                         print("Couldn't Decode People: \(myError.localizedDescription)")
+                         completion([])
+                         return
+                     }
+                 }
+             }.resume()
+         }
+    
     
 }
