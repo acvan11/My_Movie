@@ -17,7 +17,6 @@
 		33422C7D23501E66008F43A4 /* GridMovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C7C23501E66008F43A4 /* GridMovieCollectionCell.swift */; };
 		33422C892350FFB9008F43A4 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C882350FFB9008F43A4 /* WishlistViewController.swift */; };
 		33422C8B2350FFC6008F43A4 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C8A2350FFC6008F43A4 /* FavoriteViewController.swift */; };
-		33422C8D2351012C008F43A4 /* WishlistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C8C2351012C008F43A4 /* WishlistTableCell.swift */; };
 		33422C8F23510143008F43A4 /* FavoriteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C8E23510143008F43A4 /* FavoriteTableCell.swift */; };
 		33422C93235108C2008F43A4 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33422C92235108C2008F43A4 /* CoreManager.swift */; };
 		3366E5EE234940C900F72869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366E5ED234940C900F72869 /* AppDelegate.swift */; };
@@ -62,7 +61,6 @@
 		33422C7C23501E66008F43A4 /* GridMovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMovieCollectionCell.swift; sourceTree = "<group>"; };
 		33422C882350FFB9008F43A4 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		33422C8A2350FFC6008F43A4 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		33422C8C2351012C008F43A4 /* WishlistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableCell.swift; sourceTree = "<group>"; };
 		33422C8E23510143008F43A4 /* FavoriteTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableCell.swift; sourceTree = "<group>"; };
 		33422C92235108C2008F43A4 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
 		3366E5EA234940C900F72869 /* My_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,7 +211,6 @@
 				33FE229E234D9D8800B76E45 /* ListMovieTableCell.xib */,
 				332F3B06234EABFD001B1366 /* PeopleTableCell.swift */,
 				33422C7C23501E66008F43A4 /* GridMovieCollectionCell.swift */,
-				33422C8C2351012C008F43A4 /* WishlistTableCell.swift */,
 				33422C8E23510143008F43A4 /* FavoriteTableCell.swift */,
 				3366E5F7234940CA00F72869 /* Assets.xcassets */,
 			);
@@ -334,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				33422C8B2350FFC6008F43A4 /* FavoriteViewController.swift in Sources */,
-				33422C8D2351012C008F43A4 /* WishlistTableCell.swift in Sources */,
 				33FE22A4234DA03A00B76E45 /* ListSearchViewController.swift in Sources */,
 				33FE22A8234DA0AA00B76E45 /* Notification+Name.swift in Sources */,
 				3390CEC423495E4500035F3E /* Movie.swift in Sources */,

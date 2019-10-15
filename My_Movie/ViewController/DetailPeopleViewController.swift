@@ -55,6 +55,7 @@ extension DetailPeopleViewController: UITableViewDelegate {
                viewModel.movie = viewModel.moviePeople[indexPath.row]
                 goToMoviePeopleDetail(with: viewModel)
     }
+    
 }
 
 extension DetailPeopleViewController: UITableViewDataSource {
@@ -68,4 +69,6 @@ extension DetailPeopleViewController: UITableViewDataSource {
         cell.movie = movie
         return cell
     }
+    
+    
 }

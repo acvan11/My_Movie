@@ -68,6 +68,7 @@ extension ListSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.movie = viewModel.showtimeMovies[indexPath.row]
+        print(viewModel.movie.title)
         goToDetail(with: viewModel)
     }
 }

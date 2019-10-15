@@ -30,7 +30,7 @@ class DetailMovieViewController: UIViewController {
     @IBAction func wishlistButtonTapped(_ sender: UIButton) {
         let movie = viewModel.movie
         print("movie row that I click = " +  movie!.title)
-        
+        print(viewModel.isInWishlist(movie: movie!))
         if !viewModel.isInWishlist(movie: movie!) {
             viewModel.add(movie: movie!)
         }

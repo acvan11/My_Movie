@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
     func goToDetail(with vm: ViewModel) {
+        print("Go To Details movie")
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailMovieViewController") as! DetailMovieViewController
                detailVC.viewModel = vm
                navigationController?.pushViewController(detailVC, animated: true)
@@ -29,4 +30,6 @@ extension UIViewController {
                   navigationController?.pushViewController(detailMoviePeopleVC, animated: true)
                   
        }
+    
+
 }

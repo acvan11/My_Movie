@@ -71,7 +71,9 @@ class ViewModel {
     
     func isInWishlist(movie: Movie) -> Bool {
         let id = movie.id
+        print("id of movie is \(id)")
         for mv in CoreManager.shared.load() {
+            print(mv.id)
             if (mv.id == id) {
                 return true
             }
@@ -81,7 +83,6 @@ class ViewModel {
     
     func add(movie: Movie){
         CoreManager.shared.save(movie)
-        print("number of wishlist = " + String(wishlist.count))
     }
     
     func delete(movie: Movie) {
@@ -91,6 +92,7 @@ class ViewModel {
     func getWishlist() {
         print("Call getWishlist()")
         wishlist = CoreManager.shared.load()
+        print("number of movie in wishlist: \(wishlist.count)")
     }
     
 }
