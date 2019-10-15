@@ -324,29 +324,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="Uig-w5-NIr">
-                                <rect key="frame" x="25" y="481.5" width="364" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anY-2a-9oG">
-                                        <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
-                                        <state key="normal" title="Add To Wishlist"/>
-                                        <connections>
-                                            <action selector="wishlistButtonTapped:" destination="bLH-Ad-EWV" eventType="touchUpInside" id="c4C-QE-rGc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exx-mI-1Uf">
-                                        <rect key="frame" x="257" y="0.0" width="107" height="30"/>
-                                        <state key="normal" title="Add To Favorite"/>
-                                        <connections>
-                                            <action selector="favoriteButtonTapped:" destination="bLH-Ad-EWV" eventType="touchUpInside" id="qHh-q5-HOi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Uig-w5-NIr" firstAttribute="top" secondItem="ozg-yP-rIO" secondAttribute="bottom" constant="25" id="4cf-Op-hNI"/>
                             <constraint firstItem="ozg-yP-rIO" firstAttribute="leading" secondItem="18j-rA-JMl" secondAttribute="leading" constant="25" id="4hZ-dd-QZD"/>
                             <constraint firstItem="18j-rA-JMl" firstAttribute="trailing" secondItem="0eT-Mf-CtM" secondAttribute="trailing" constant="25" id="6ps-Vr-64K"/>
                             <constraint firstItem="18j-rA-JMl" firstAttribute="trailing" secondItem="b2h-GN-PQr" secondAttribute="trailing" constant="50" id="8MS-Oi-ptA"/>
@@ -358,9 +338,7 @@
                             <constraint firstItem="lMA-eX-Ts0" firstAttribute="top" secondItem="cng-ld-fJi" secondAttribute="bottom" constant="15" id="OJg-MP-b8e"/>
                             <constraint firstItem="cng-ld-fJi" firstAttribute="top" secondItem="b2h-GN-PQr" secondAttribute="bottom" constant="15" id="QLU-xr-Mkc"/>
                             <constraint firstItem="18j-rA-JMl" firstAttribute="trailing" secondItem="lMA-eX-Ts0" secondAttribute="trailing" constant="25" id="SJ5-IS-f21"/>
-                            <constraint firstItem="18j-rA-JMl" firstAttribute="trailing" secondItem="Uig-w5-NIr" secondAttribute="trailing" constant="25" id="Ugm-p5-who"/>
                             <constraint firstItem="b2h-GN-PQr" firstAttribute="leading" secondItem="18j-rA-JMl" secondAttribute="leading" constant="50" id="W8D-Qi-ghL"/>
-                            <constraint firstItem="Uig-w5-NIr" firstAttribute="leading" secondItem="18j-rA-JMl" secondAttribute="leading" constant="25" id="arv-Ua-xcd"/>
                             <constraint firstItem="cng-ld-fJi" firstAttribute="leading" secondItem="18j-rA-JMl" secondAttribute="leading" constant="20" id="cwR-F2-eeQ"/>
                             <constraint firstItem="lMA-eX-Ts0" firstAttribute="leading" secondItem="18j-rA-JMl" secondAttribute="leading" constant="25" id="hp7-i1-9ZL"/>
                             <constraint firstItem="6FL-3O-p2m" firstAttribute="centerX" secondItem="Rel-bC-g3E" secondAttribute="centerX" id="jqS-bl-AMs"/>

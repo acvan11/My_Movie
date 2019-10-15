@@ -69,11 +69,12 @@ class ViewModel {
         }
     }
     
+
     func isInWishlist(movie: Movie) -> Bool {
         let id = movie.id
         print("id of movie is \(id)")
-        for mv in CoreManager.shared.load() {
-            print(mv.id)
+        for mv in wishlist {
+            print("id move \(mv.title) of wishlist: " + String(mv.id))
             if (mv.id == id) {
                 return true
             }

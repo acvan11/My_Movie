@@ -24,13 +24,6 @@ class DetailMoviePeopleViewController: UIViewController {
     }
     
     
-    @IBAction func wishlistButtonTapped(_ sender: UIButton) {
-        //TODO
-    }
-    
-    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
-    }
-    
     func setupDetail() {
         movieName.text = viewModel.movie.title
         let year = viewModel.movie.year ?? "No data"

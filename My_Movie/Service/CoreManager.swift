@@ -36,7 +36,7 @@ final class CoreManager {
         let core = CoreMovie(entity: entity, insertInto: context)
         
         //KVC - Key Value Coding - access object property by String
-        core.setValue(movie.id, forKey: "id")
+        core.setValue(movie.id, forKey: "uid")
         core.setValue(movie.popularity, forKey: "popularity")
         core.setValue(movie.poster, forKey: "poster")
         core.setValue(movie.title, forKey: "title")

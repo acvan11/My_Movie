@@ -27,12 +27,24 @@ class DetailMovieViewController: UIViewController {
         setupDetail()
     }
 
+//    func wishlistButtonText() {
+////        let movie = viewModel.movie
+//
+//    }
+    
     @IBAction func wishlistButtonTapped(_ sender: UIButton) {
         let movie = viewModel.movie
-        print("movie row that I click = " +  movie!.title)
-        print(viewModel.isInWishlist(movie: movie!))
+        viewModel.getWishlist()
+//        viewModel.add(movie: movie!)
+//        viewModel.isInWishlist(movie: movie!)
         if !viewModel.isInWishlist(movie: movie!) {
             viewModel.add(movie: movie!)
+        } else {
+            let wishlistAlert = UIAlertController(title: "Ooppss!!!", message: "Sorry!!! This movie is already in the wishlist", preferredStyle: .alert)
+                                  let okayAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+                                  wishlistAlert.addAction(okayAction)
+                                     present(wishlistAlert, animated: true, completion: nil)
+
         }
     }
     
